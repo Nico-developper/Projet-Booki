@@ -322,7 +322,7 @@ h1 {
 .hebergements-and-populaires section {
     background-color: #F2F2F2;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -492,7 +492,7 @@ h1 {
 }
 .hebergements-and-populaires section {
     border-radius: 0px;
-    padding: 30px 30px 0px 30px;
+    padding: 20px 15px 0px 15px;
     box-sizing: border-box;
 }
 .hebergements-and-populaires{
@@ -521,8 +521,8 @@ h1 {
 
 /************************************** Activités **************************************/
 .activites {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .marseille-activite-cards {
@@ -570,7 +570,11 @@ h1 {
     .activites img {
         width: 100%;
         height: 150px;
-    } 
+    }
+    .activites {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
