@@ -62,6 +62,9 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+border-box{
+    box-sizing: border-box;
+}
 
 /************************************* Body **************************************/
 body{
@@ -95,6 +98,9 @@ body{
 
 .search-box button i {
     display: block !important;
+}
+.search-box input{
+    width: calc(100% - 150px);
 }
 }
 
@@ -175,17 +181,15 @@ p {
 }
 .search-box .fa-map-marker-alt {
     display: inline-block;
-    width: 30px;
     padding: 14px;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #F2F2F2;
     border-radius: 15px 0px 0px 15px;
     border: 1px solid #F2F2F2;
 }
 .search-box input {
     outline: none;
-    height: 53px;
-    margin-left: -5px;
+    height: 48px;
     border: none;
     padding: 0px 0px 0px 10px;
     border-top: 1px solid #F2F2F2;
@@ -212,14 +216,13 @@ p {
     display: none;
 }
 .filterBar{
-    display: flex    ;
+    display: flex;
     align-items: center;
     gap: 1em;
     margin: 20px 0px 20px 0px;
 }
-.filterBar>span{
+.filterBar div{
     display: flex;
-    gap:.5em;
     padding: .75em;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
@@ -280,7 +283,7 @@ main{
 }
 .search-box button {
     background-color: #0065FC;
-    height: 53px;
+    height: 48px;
     width: 50px;
     border: none;
     box-shadow: 0px 5px 2px #D9D9D9;
@@ -289,6 +292,7 @@ main{
     cursor: pointer;
     color: white;
     font-weight: bold;
+    margin-left: -10px;
 }
 h1 {
     margin-top: 10px;
@@ -296,7 +300,8 @@ h1 {
 .filterBar{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
 .filterBar h2{
     width: 100%;
@@ -304,6 +309,13 @@ h1 {
 }
 .info-group{
     padding: 0px 10px 0px 10px;
+}
+.filterBar div{
+    width: 40%;
+}
+.filterBar div i{
+    font-size: 1em;
+    margin-inline: .5em;
 }
 }
 
@@ -357,7 +369,7 @@ h1 {
     display: flex;
     flex-direction: column;
     margin: 5px 0px 5px 0px;
-    padding-left: 20px;
+    padding-left: 1em;
 }
 .marseille-cards .card-title {
     font-size: 14px;
@@ -465,9 +477,6 @@ h1 {
 .hebergements-and-populaires{
     display: flex;
     flex-direction: column-reverse;
-}
-.populaires-cards .card{
-    width: 100%;
 }
 .populaires{
     margin: 0px;
