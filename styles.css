@@ -62,13 +62,14 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
-
+border-box{
+    box-sizing: border-box;
+}
 
 /************************************* Body **************************************/
 body{
     margin:0;
 }
-
 
 /************************************** Body Responsive **************************************/
 @media screen and (min-width: 1440px) {
@@ -98,9 +99,10 @@ body{
 .search-box button i {
     display: block !important;
 }
+.search-box input{
+    width: calc(100% - 150px);
 }
-
-
+}
 
 /************************************** Header **************************************/
 #logo {
@@ -140,8 +142,6 @@ p {
     margin: 0px 0px 25px 0px;
 }
 
-
-
 /************************************** Header Responsive **************************************/
 @media screen and (min-width: 1440px) {
 
@@ -173,28 +173,23 @@ p {
     }
 }
 
-
 /************************************** Main **************************************/
 .search-box {
     display: flex;
     align-items: center;
     width: auto;
 }
-
 .search-box .fa-map-marker-alt {
     display: inline-block;
-    width: 30px;
     padding: 14px;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #F2F2F2;
     border-radius: 15px 0px 0px 15px;
     border: 1px solid #F2F2F2;
 }
-
 .search-box input {
     outline: none;
-    height: 53px;
-    margin-left: -5px;
+    height: 48px;
     border: none;
     padding: 0px 0px 0px 10px;
     border-top: 1px solid #F2F2F2;
@@ -206,7 +201,6 @@ p {
     font-size: large;
 
 }
-
 .search-box button {
     background-color: #0065FC;
     height: 53px;
@@ -218,30 +212,27 @@ p {
     font-size: large;
     border: 2px solid #0065FC;
 }
-
 .search-box button .fa-search {
     display: none;
 }
-
-.filterBar{
-    display: flex    ;
+.filterBar {
+    display: flex;
     align-items: center;
     gap: 1em;
+    margin: 20px 0px 20px 0px;
+    font-size: 15px;
 }
 
-.filterBar>span{
+.filterBar div{
     display: flex;
-    gap:.5em;
-    padding: .75em;
+    padding: 10px 15px 10px 15px;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     font-weight: bold;
 }
-
 .filterBar :hover{
     background-color: #DEEBFF;
 }
-
 .fa-info {
     border: 2px solid#D9D9D9;
     padding-top: 5px;
@@ -250,7 +241,13 @@ p {
     padding-bottom: 5px;
     border-radius: 50%;
 }
-
+.Infobar{
+    display: flex;
+    align-items: baseline;
+}
+.Infobar p{
+    padding-left: 10px;
+}
 
 /************************************** Main Responsive **************************************/
 @media screen and (min-width: 1440px) {
@@ -269,6 +266,7 @@ p {
 }
 .filterBar h2{
     width: 100%;
+    margin: 0px;
 }
 }
     
@@ -287,7 +285,7 @@ main{
 }
 .search-box button {
     background-color: #0065FC;
-    height: 53px;
+    height: 48px;
     width: 50px;
     border: none;
     box-shadow: 0px 5px 2px #D9D9D9;
@@ -296,32 +294,39 @@ main{
     cursor: pointer;
     color: white;
     font-weight: bold;
+    margin-left: -10px;
 }
 h1 {
     margin-top: 10px;
 }
-
 .filterBar{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
-
 .filterBar h2{
     width: 100%;
+    margin: 0px;
 }
 .info-group{
     padding: 0px 10px 0px 10px;
 }
+.filterBar div{
+    width: 40%;
+    padding: 15px 8px 15px 8px;
 }
-
+.filterBar div i{
+    font-size: 1em;
+    margin-inline: .2em;
+}
+}
 
 /************************************** Hebergements And Populaires **************************************/
 .hebergements-and-populaires {
     display: flex;
     margin-bottom: 40px;
 }
-
 .hebergements-and-populaires section {
     background-color: #F2F2F2;
     border-radius: 20px;
@@ -329,28 +334,22 @@ h1 {
     box-sizing: border-box;
 }
 
-
 /************************************** Hebergements **************************************/
 .villes-title{
     margin: 0;
 }
-
 .hebergements {
     display: flex;
     flex-wrap: wrap;
     margin-right: 1.5em;
     align-content: space-around;
 }
-
-
-
 .hebergements img {
     width: 100%;
     height: 110px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
 .marseille-cards {
     display: flex;
     flex-wrap: wrap;
@@ -359,38 +358,31 @@ h1 {
     margin-top: 30px;
     margin-bottom: 40px;
 }
-
 .marseille-cards a {
    width: 30%;
 }
-
 .more-learn {
     font-weight: bold;
 }
-
 .marseille-cards .card {
     display: flex;
     flex-direction: column;
 }
-
 .card-content {
     display: flex;
     flex-direction: column;
     margin: 5px 0px 5px 0px;
-    padding-left: 20px;
+    padding-left: 1em;
 }
-
 .marseille-cards .card-title {
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
 .marseille-cards .card-subtitle {
     font-size: 13px;
     margin-bottom: 5px;
 }
-
 .marseille-cards .card-rating {
     margin-bottom: 5px;
 }
@@ -399,25 +391,20 @@ h1 {
 .populaires {
     width: 60%;
 }
-
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .populaires-cards .card {
     display: flex;
-    
 }
-
 .populaires-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
 .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
@@ -426,16 +413,13 @@ h1 {
     justify-content: space-between;
     box-sizing: border-box;
 }
-
 .populaires-cards .card-title {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
 .populaires-cards .card-subtitle {
     margin: 0;
 }
-
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
@@ -452,30 +436,24 @@ h1 {
     .hebergements-and-populaires {
         flex-direction: column;
     }
-
     .hebergements {
         width: 100%;
     }
-
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
-
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .populaires-cards a {
         width: 30%;
     }
-
     .populaires-cards .card-title {
         font-size: 14px;
     }
-
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
@@ -493,6 +471,7 @@ h1 {
     background-color: white;
     display: flex;
     flex-direction: column;
+    margin: 0px;
 }
 .hebergements-and-populaires section {
     border-radius: 0px;
@@ -502,10 +481,6 @@ h1 {
 .hebergements-and-populaires{
     display: flex;
     flex-direction: column-reverse;
-}
-
-.populaires-cards .card{
-    width: 100%;
 }
 .populaires{
     margin: 0px;
@@ -520,7 +495,6 @@ h1 {
     display: block;
     width: 100%;
 }
-
 }
 
 /************************************** Activités **************************************/
@@ -528,14 +502,12 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .marseille-activite-cards {
     display: flex;
     justify-content: space-between;
     gap: 2em;
     margin-top: 20px;
 }
-
 .activites img {
     width: 100%;
     height: 350px;
@@ -545,9 +517,6 @@ h1 {
 .marseille-activite-cards a {
     width: 25%;
  }
-
-
-
 
 /************************************** Acticités Responsive **************************************/
 @media screen and (min-width: 1440px) {
@@ -575,14 +544,13 @@ h1 {
     .activites img {
         width: 100%;
         height: 150px;
+        object-fit: cover;
     }
     .activites {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
-
-
 
 /************************************** Footer **************************************/
 footer {
@@ -600,23 +568,23 @@ footer nav ul li {
     text-align: left;
     list-style-type: none;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
 }
 footer nav ul {
     margin: 0;
-    padding: 20px;
-}
-footer nav ul h2 {
-    margin: 0;
-    padding: 5px;
+    padding: 10px;
 }
 footer nav ul li a {
     color: black;
     text-decoration: none;
 }
-
-
+footer nav h3{
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+}
 
 /************************************** Footer Responsive **************************************/
 @media all and (min-width: 320px) and (max-width: 768px) {
